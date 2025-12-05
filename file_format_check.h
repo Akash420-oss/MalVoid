@@ -242,7 +242,7 @@ if(compare(dqt_bytes_match,"Yes")==0x52||eoi_count<0x1||eoi_count>0x1||soi_count
 else{
   suspect="No";
 }
-printf("%d",dqt_count);
+//printf("%d",dqt_count);
 fclose(jpg_file);
 }
 
@@ -389,4 +389,30 @@ else{
 }
 
   fclose(bytecode_file);
+}
+char file_checking(void *data){
+  FILE *file_val=fopen(data,"r+");
+  fseek(file_val,0x0,SEEK_END);
+  file_size=ftell(file_val);
+  if(file_size>=1000 && file_size<=1000000){
+    file_size=file_size/1000;
+    file_size_unit="kb";
+  }
+  else if(file_size>=1000000){
+    file_size=file_size/1000000;
+    file_size_unit="mb";
+  }
+  else{
+  file_size=file_size;
+   file_size_unit="byte";
+  }
+ // printf("%d",file_size);
+  fclose(file_val);
+ // if(compare(file_format,"elf")==0x52||compare(file_format,"pcap")==0x52||compare(file_format,"gzip")==0x52||compare(file_format,"zip")==0x52||compare(file_format,"rar")==0x52||compare(file_format,"gif")==0x52||compare(file_format,"bmp")==0x52||compare(file_format,"mbr")==0x52||compare(file_format,"wav")==0x52||compare(file_format,"undefined")==0x52)
+for_elf(data,magic_num);
+for_pe(data,magic_num);
+for_bytecode(data,magic_num);
+for_jpg(data,magic_num);
+for_pdf(data,magic_num);
+for_png(data,magic_num);
 }

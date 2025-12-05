@@ -3,14 +3,14 @@
 //#include"ascii_art.h"
 void *cpu_byteorder(){
 short int byteorder=0x424c;
-return (*(char *)&byteorder==0x4c)?"Liitle Endian":"Big Endian";
+return (*(char *)&byteorder==0x4c)?"Little Endian":"Big Endian";
 }
 char magic_num_compare(void *magic_num,char val){
      char count=0x0;
     if(val=='E'){
     char i=0x0;
 for(;i<sizeof(ELF);i++){
-
+//printf("check=%x from_file=%x\n",*(ELF+i),*((char *)magic_num+i));
      if(*((char *)magic_num+i)==*(ELF+i)){
         count++;
       }
@@ -154,7 +154,7 @@ for(;i<sizeof(WAV);i++){
 else if(val=='V'){
     char i=0x0;
 for(;i<sizeof(JAVA);i++){
-
+//printf("check=%x from_file=%x\n",*(JAVA+i),*((char *)magic_num+i));
      if(*((char *)magic_num+i)==*(JAVA+i)){
         count++;
       }
@@ -165,7 +165,7 @@ for(;i<sizeof(JAVA);i++){
 else if(val=='C'){
     char i=0x0;
 for(;i<sizeof(PCAP);i++){
-
+//printf("check=%x from_file=%x\n",*(PCAP+i),*((char *)magic_num+i));
      if(*((char *)magic_num+i)==*(PCAP+i)){
         count++;
       }
@@ -183,6 +183,9 @@ for(;i<sizeof(MBR);i++){
     }
 
  (sizeof(MBR)>=count)?count:0x0;
+}
+else{
+   return count=0x0;
 }
 }
 char compare(void *str1,void *str2){
