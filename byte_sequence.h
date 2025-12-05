@@ -29,6 +29,7 @@ void *elf_version;
 void *elf_osabi;
 void *elf_file_signature;
 void *packed;
+char pdf_val[0x3];
 void *pdf_version;
 void *pdf_hidden_data;
 void *pdf_file_signature;

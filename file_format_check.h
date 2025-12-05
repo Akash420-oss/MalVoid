@@ -32,6 +32,9 @@ if(compare(endian,cpu_byteorder())==0x52){
 else if(compare(endian,cpu_byteorder())==0x57){
     endian_check="Bad Byte Order";
 }
+if(compare(endian,"Unknown Endian")==0x52){
+  endian_check="Unknown Byte Order";
+}
 fseek(elf_file,0x6,SEEK_SET);
 fscanf(elf_file,"%c",&elf_val);
 if(elf_val==0x1){
@@ -97,7 +100,7 @@ if(compare(elf_file_signature,"Matched")==0x52){
 
 void for_pdf(void *data,void *magic_num){
 pdf_file_signature=(magic_num_compare(magic_num,'D')==0x4)?"Matched":"Not Matched";
-char pdf_val[0x3];
+
 FILE *pdf_file=fopen(data,"r+");
 
 fseek(pdf_file,0x5,SEEK_SET);
@@ -119,9 +122,9 @@ pdf_hidden_data="Yes";
 }
 free(pdf_eof);
 }
+}
 else{
   pdf_version="Not Detected";
-}
 }
 fclose(pdf_file);
 }
@@ -134,7 +137,7 @@ fseek(jpg_file,0x6,SEEK_SET);
 char label_check[0x5];
 while(!feof(jpg_file)){
   fread(label_check,0x1,0x5,jpg_file);
-  printf("%s\n",label_check);
+ // printf("%s\n",label_check);
   if(compare(label_check,"JFIF")==0x52){
     label=label_check;
     break;
