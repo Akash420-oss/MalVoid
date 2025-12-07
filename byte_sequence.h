@@ -35,6 +35,7 @@ void *pdf_hidden_data;
 void *pdf_file_signature;
 void *jpg_file_signature;
 char  jpg_file_version[0x3];
+char  label_check[0x5];
 void *label;
 void *suspect="No";
 void *dqt_bytes_match="No";

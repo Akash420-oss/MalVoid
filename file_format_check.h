@@ -134,7 +134,7 @@ jpg_file_signature=(magic_num_compare(magic_num,'J')==0x2)?"Matched":"Not Matche
 char sections_count[0x2];
 FILE *jpg_file=fopen(data,"r+");
 fseek(jpg_file,0x6,SEEK_SET);
-char label_check[0x5];
+
 while(!feof(jpg_file)){
   fread(label_check,0x1,0x5,jpg_file);
  // printf("%s\n",label_check);
@@ -151,13 +151,14 @@ break;
     break;
   }
 }
-
+if(compare(jpg_file_signature,"Matched")==0x52){
 fseek(jpg_file,0xb,SEEK_SET);
 fread(bytes_two,0x1,0x2,jpg_file);
 //printf("%x",bytes_two[1]);
 *((char *)jpg_file_version+0x0)=("%x",bytes_two[0x0]);
 *((char *)jpg_file_version+0x1)=0x2e;
 *((char *)jpg_file_version+0x2)=("%x",*(bytes_two+0x1));
+}
 // char soi[]={0xff,0xd8};
 char soi_count=0x0,eoi_count=0x0,dqt_count=0x0;
 fseek(jpg_file,0x0,SEEK_SET);
@@ -245,7 +246,7 @@ if(compare(dqt_bytes_match,"Yes")==0x52||eoi_count<0x1||eoi_count>0x1||soi_count
 else{
   suspect="No";
 }
-//printf("%d",dqt_count);
+//printf("%x",*(jpg_file_version+0x2));
 fclose(jpg_file);
 }
 
