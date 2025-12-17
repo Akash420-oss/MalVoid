@@ -5,6 +5,25 @@ void *cpu_byteorder(){
 short int byteorder=0x424c;
 return (*(char *)&byteorder==0x4c)?"Little Endian":"Big Endian";
 }
+void file_size_fun(void *data){
+     FILE *file_val=fopen(data,"r+");
+  fseek(file_val,0x0,SEEK_END);
+  file_size=ftell(file_val);
+  if(file_size>=1000 && file_size<=1000000){
+    file_size=file_size/1000;
+    file_size_unit="kb";
+  }
+  else if(file_size>=1000000){
+    file_size=file_size/1000000;
+    file_size_unit="mb";
+  }
+  else{
+  file_size=file_size;
+   file_size_unit="byte";
+  }
+ // printf("%d",file_size);
+  fclose(file_val);
+}
 char magic_num_compare(void *magic_num,char val){
      char count=0x0;
     if(val=='E'){

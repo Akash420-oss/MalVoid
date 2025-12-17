@@ -1,5 +1,5 @@
 void deepscan_ascii(void *file_name,void *file_type,void *byteorder,void *file_format){
-printf("\033[33m                     .-\"      \"-.\n");
+printf("\n\033[33m                     .-\"      \"-.\n");
 printf("\033[33m                    /            \\ \n");
 printf("\033[33m                   |              | \n");
 printf("\033[33m                   |,  .-.  .-.  ,| \n");
@@ -58,7 +58,7 @@ printf("                   \033[31mPE \033[32mRESULT\033[0m                 \n")
 printf("     • \033[31mDOS Magic Number: \033[32m%s           \n",dos_file_signature);
 printf("     • \033[31mPE Magic Number: \033[32m%s \n",pe_file_signare);
 printf("     • \033[31mBinary Type: \033[32m%s               \n",pe_type);
-printf("     • \033[31mByteorder Status: \033[32m%s               \n",pe_bit);
+printf("     • \033[31mBit Value: \033[32m%s               \n",pe_bit);
 printf("     • \033[31mObfuscated: \033[32m%s                               \n",packed_exe);           
 printf("\033[31m  └────────────────────────────────────────────┘\n\033[0m");
 printf("\033[31m  ┌────────────────────────────────────────────┐\n");

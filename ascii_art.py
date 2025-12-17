@@ -9,7 +9,7 @@ print("""
    9XXb._       _.dXXXXb dXXXXbo.                 .odXXXXb dXXXXb._       _.dXXP
     9XXXXXXXXXXXXXXXXXXXVXXXXXXXXOo.           .oOXXXXXXXXVXXXXXXXXXXXXXXXXXXXP
      `9XXXXXXXXXXXXXXXXXXXXX'~   ~`OOO8b   d8OOO'~   ~`XXXXXXXXXXXXXXXXXXXXXP'
-       `9XXXXXXXXXXXP' `9XX'   \033[32mDIE\033[0m\033[33m    `98v8P'  \033[32mKILL\033[0m\033[33m   `XXP' `9XXXXXXXXXXXP'\033[0m
+       `9XXXXXXXXXXXP' `9XX'   \033[32mMAL\033[0m\033[33m    `98v8P'  \033[32mVOID\033[0m\033[33m   `XXP' `9XXXXXXXXXXXP'\033[0m
          \033[31m  ~~~~~~~       9X.          .db|db.          .XP       ~~~~~~~
                            )b.  .dbo.dP'`v'`9b.odb.  .dX(
                          ,dXXXXXXXXXXXb     dXXXXXXXXXXXb.
@@ -37,9 +37,9 @@ print("""
                                                \033[5;31m~ᵐᵃˡʷᵃʳᵉ ˡⁱᵛᵉˢ ⁱⁿ ᵗʰᵉ ᵛᵒⁱᵈ~\033[0m
 
  """)
-print("\nWelcome, Analyst. Your MalOps Console is ready. Type 'help/?' to see commands and 'quit' to exit.")
+print("\nWelcome, Analyst. Your MalOps Console is ready. Type 'help/?' to see commands and 'quit' to exit.\n")
 def main():
-    cmd=input("\033[0;31m⪼----➢ \033[0m")
+    cmd=input("\033[0;31mMalVoid➢ \033[0m")
     if(cmd=="quit" or cmd=="bye"):
       print("""
       .-.
