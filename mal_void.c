@@ -4,6 +4,7 @@
 #include "header_files.h"
 #include "deepscan.h"
 #include "stringextract.h"
+#include "hexdecipher.h"
 #define malvoid main
 void help();
 void malvoid(char argc,void *argv[]){
@@ -17,6 +18,9 @@ deepscan(*(argv+0x2));
 }
 else if(compare(*(argv+0x1),"stringextract")==0x52){
 stringextract(*(argv+0x2)); 
+}
+else if(compare(*(argv+0x1),"hexdecipher")==0x52){
+hexdecipher(*(argv+0x2)); 
 }
 else{
     printf("I don't recognize that command.\n");

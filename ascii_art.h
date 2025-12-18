@@ -1,23 +1,13 @@
 void deepscan_ascii(void *file_name,void *file_type,void *byteorder,void *file_format){
-printf("\n\033[33m                     .-\"      \"-.\n");
-printf("\033[33m                    /            \\ \n");
-printf("\033[33m                   |              | \n");
-printf("\033[33m                   |,  .-.  .-.  ,| \n");
-printf("\033[31m                   | \)\(_o/  \\o_\)\( | \n");
-printf("\033[31m                   |/     /\\     \\| \n");
-printf("\033[31m                   (_     ^^     _) \n");
-printf("\033[31m                    \\__|IIIIII|__/ \n");
-printf("\033[31m                     | \\IIIIII/ | \n");
-printf("\033[31m                     \\          / \n");
-printf("\033[31m                      `--------` \n");
-//if(code==0x1){
-printf("\n\033[31m                [!] MALICIOUS CODE DETECTED \n");
-//}
-// else{
-// printf("\n\033[32m                [✓] NO MALICIOUS CODE FOUND \n");    
-// }
+printf(
+"\033[38;5;93m   ╔════════════════════════════════════════════╗\033[0m\n"
+"\033[38;5;51m   ║           DEEP-SCAN :: INITIATED           ║\033[0m\n"
+"\033[38;5;93m   ╠════════════════════════════════════════════╣\033[0m\n"
+"\033[38;5;196m   ║  [!] MALICIOUS CODE DETECTED               ║\033[0m\n"
+"\033[38;5;93m   ╚════════════════════════════════════════════╝\033[0m\n"
+);
 
-printf("  ┌────────────────────────────────────────────┐\n");
+printf("\033[0;31m   ┌────────────────────────────────────────────┐\033[0m\n");
 printf("                   \033[31mSCAN \033[32mRESULT\033[0m                 \n");
 printf("     • \033[31mCPU byteorder: \033[32m%s           \n",byteorder);
 printf("     • \033[31mFile: \033[32m%s \n",file_name);
