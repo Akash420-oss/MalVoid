@@ -5,6 +5,7 @@
 #include "deepscan.h"
 #include "stringextract.h"
 #include "hexdecipher.h"
+#include "dataforge.h"
 #define malvoid main
 void help();
 void malvoid(char argc,void *argv[]){
@@ -21,6 +22,9 @@ stringextract(*(argv+0x2));
 }
 else if(compare(*(argv+0x1),"hexdecipher")==0x52){
 hexdecipher(*(argv+0x2)); 
+}
+else if(compare(*(argv+0x1),"dataforge")==0x52){
+dataforge(*(argv+0x2)); 
 }
 else{
     printf("I don't recognize that command.\n");
