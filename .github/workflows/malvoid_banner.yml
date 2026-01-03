@@ -84,7 +84,7 @@ EOF
         run: |
           git config user.name "malvoid-bot"
           git config user.email "bot@malvoid.local"
-          git add banner.svg
-          git commit -m "Auto-generate banner.svg" || echo "No changes"
+          git add malvoid_banner.svg
+          git commit -m "Auto-generate malvoid_banner.svg" || echo "No changes"
           git push
 
