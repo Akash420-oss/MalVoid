@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=sudo malvoid
+GenericName=Malvoid
+Icon=malvoid_icon
+Name=Malvoid
+Terminal=true
+Type=Application

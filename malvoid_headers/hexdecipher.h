@@ -1,5 +1,3 @@
-#include<stdio.h>
-#include<stdlib.h>
 void hexdecipher(void *hex_file){
 printf(
 "\n"

@@ -1,5 +1,5 @@
-#include "file_format_check.h"
-#include "ascii_art.h"
+#include <malvoid_headers/file_format_check.h>
+#include <malvoid_headers/ascii_art.h>
 void *file_format_guess(void *magic_num_arrr){
 char *arr[]={"undefined/text","elf","pe","pdf","jpg","png","gif","bmp","zip","gzip","rar","mp3","wav","java","pcap","mbr"};
 char maxsize=*((char *)magic_num_arrr+0x0);

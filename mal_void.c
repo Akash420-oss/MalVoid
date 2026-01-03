@@ -2,11 +2,11 @@
 #include<stdlib.h>
 #include<string.h>
 #include<signal.h>
-#include "header_files.h"
-#include "deepscan.h"
-#include "stringextract.h"
-#include "hexdecipher.h"
-#include "dataforge.h"
+#include<malvoid_headers/header_files.h>
+#include<malvoid_headers/deepscan.h>
+#include<malboid_headers/stringextract.h>
+#include<malvoid_headers/hexdecipher.h>
+#include<malvoid_headers/dataforge.h>
 #define malvoid main
 void help();
 void error_catch(int sig){

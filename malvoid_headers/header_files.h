@@ -1,6 +1,5 @@
 #include<sys/stat.h>
-#include"byte_sequence.h"
-//#include"ascii_art.h"
+#include<malvoid_headers/byte_sequence.h>
 void *cpu_byteorder(){
 short int byteorder=0x424c;
 return (*(char *)&byteorder==0x4c)?"Little Endian":"Big Endian";
