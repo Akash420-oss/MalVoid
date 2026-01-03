@@ -1,13 +1,16 @@
 CC = gcc
-CFLAGS = -w
+CFLAGS = -w 
 SRC = mal_void.c
 OUT = mal_void
 PY = malvoid.py
 HDR = malvoid_headers
 PYBIN = malvoid
 CHKDIR = /usr/include/malvoid_headers
-
 build:
+	@$(CC) $(CFLAGS) -I. $(SRC) -o $(OUT)
+	@mv $(PY) $(PYBIN) 
+	@chmod a+x mal_void malvoid
+install:
 	@clear
 	@echo -e "\033[1;36m[ INIT ]\033[0m Installing + building project..."
 	@sleep 0.5
@@ -17,8 +20,6 @@ build:
 	i=0; \
 	if [ ! -d "$(CHKDIR)" ]; then \
 	  echo -e "\033[1;34m[ MKDIR ]\033[0m Creating $(CHKDIR)"; \
-	  sudo mkdir -p /usr/share/doc/Malvoid_Doc; \
-	  sudo cp README.md LICENSE /usr/share/doc/Malvoid_Doc/; \
 	  sudo cp -r "$(HDR)" "/usr/include/$(HDR)"; \
 	  sudo cp  malvoid_icon.png "/usr/share/pixmaps"; \
 	  sudo cp  malvoid.desktop "/usr/share/applications"; \
@@ -59,7 +60,7 @@ clean:
 	  done; \
 	  sudo rm -rf "$(CHKDIR)"; \
 	fi; \
-	sudo rm -rf /usr/share/pixmaps/malvoid_icon.png /usr/share/applications/malvoid.desktop /usr/share/doc/Malvoid_Doc; \
+	sudo rm -f /usr/share/pixmaps/malvoid_icon.png /usr/share/applications/malvoid.desktop; \
 	sudo rm -f "/usr/bin/$(OUT)" && sudo rm -f "/usr/bin/$(PYBIN)"; \
 	echo "" \
 	'
