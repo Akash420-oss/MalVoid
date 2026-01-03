@@ -35,6 +35,6 @@ def main():
     if(cmd=="quit" or cmd=="bye"):
        print("\n\033[38;5;51mSession terminated.\033[0m\n")
     else:
-        system(f"./mal_void {cmd}")
+        system(f"mal_void {cmd}")
         main() 
 main()
