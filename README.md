@@ -22,7 +22,6 @@
 - [Overview](#overview)
 - [Design Approach](#design-approach)
 - [Features](#features)
-- [Design Principles](#design-principles)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Installation](#installation)
@@ -66,18 +65,7 @@ Malvoid is built around three core ideas:
 - Manually modify individual bytes for controlled analysis
 - Provide clear terminal output suitable for inspection
 
-
-
-
-## Design Principles
-
-- Static analysis only; no execution or emulation  
-- Deterministic and reproducible behavior  
-- Explicit and minimal dependencies  
-- Clear separation between parsing and presentation  
-- Predictable and stable output format  
-
-
+  
 
 ## Getting Started
 
@@ -135,7 +123,7 @@ The image below shows the help screen as it appears in the terminal:
 </p>
 
 <p>
-This screen is intended as a quick reference for users while working with the tool. It does not display or process any file content.
+This screen is intended as a quick reference for users while working with the tool.
 </p>
 
 ## Uninstall
@@ -156,4 +144,6 @@ make clean
 
 Maintained by **Akash Sil**.
 
-Bug reports, feature requests, and contributions are welcome. Please use the GitHub issue tracker or open a pull request.
+- Bug reports, feature requests, and contributions are welcome.
+- Please use the GitHub issue tracker or open a pull request.
+- <b color="blue">akashsil420@duck.com</b>
