@@ -1,10 +1,8 @@
 <p align="center">
-  <img src="Malvoid_banner.png" width="100%" alt="Malvoid banner">
+  <img src="Malvoid_banner.png" width="50%" alt="Malvoid banner">
 </p>
 
-<p align="center">
-  <img src="logo.png" width="160">
-</p>
+
 
 <h1 align="center">Malvoid</h1>
 
