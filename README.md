@@ -94,7 +94,7 @@ yay -S malvoid-analysis
 ### Other Linux-based distributions
 
 ```
-git clone https://github.com/Akash420-oss/Malvoid.git
+git clone https://github.com/Akash420-oss/MalVoid.git
 cd Malvoid
 make install
 ```
