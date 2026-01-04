@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Malvoid_banner.png" width="50%" alt="Malvoid banner">
+  <img src="malvoid_banner.png" width="70%" alt="Malvoid banner">
 </p>
 
 
