@@ -17,6 +17,7 @@ install:
 
 	@bash -c '\
 	frames=("[█       ]" "[██      ]" "[███     ]" "[████    ]" "[█████   ]" "[██████  ]" "[███████ ]" "[████████]"); \
+	rm -f malvoid_banner.png malvoid_output.png; \
 	i=0; \
 	if [ ! -d "$(CHKDIR)" ]; then \
 	  echo -e "\033[1;34m[ MKDIR ]\033[0m Creating $(CHKDIR)"; \
