@@ -26,7 +26,7 @@
   - [Requirements](#requirements)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Output](#output)
+- [Console Interface](#output)
 - [Uninstall](#uninstall)
 - [Contact](#contact)
 
@@ -108,10 +108,10 @@ sudo malvoid
 help
 ```
 
-## Output
+## Console Interface
 
 <p>
-Malvoid currently shows output through its built in help screen. The <code>help</code> command displays a single-page list of available commands and their usage.
+Malvoid currently presents console interface through its built in help screen. The <code>help</code> command displays a single-page list of available commands and their usage.
 </p>
 
 <p>
