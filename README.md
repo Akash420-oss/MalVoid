@@ -95,7 +95,7 @@ yay -S malvoid-analysis
 
 ```
 git clone https://github.com/Akash420-oss/MalVoid.git
-cd Malvoid
+cd MalVoid
 make install
 ```
 
